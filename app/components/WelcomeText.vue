@@ -18,7 +18,7 @@
             <span class="flex items-baseline gap-x-4">
                 <span class="font-extralight text-[0.6em]">&amp;</span>
                 <span
-                    class="font-black pb-3 bg-linear-to-r from-blue-500 to-indigo-500 animate-colorShift bg-clip-text text-transparent w-max">
+                    class="font-black bg-linear-to-r from-blue-500 to-indigo-500 animate-colorShift bg-clip-text text-transparent w-max py-[0.1em] -my-[0.1em] pe-2">
                     Designer
                 </span>
             </span>
