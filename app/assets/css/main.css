@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  	--font-sans: "Inter", system-ui, sans-serif;
+	--animate-colorShift: colorShift 8s ease infinite;
+}
+
+@keyframes colorShift {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
