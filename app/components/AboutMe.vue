@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type { PageFeatureProps } from '@nuxt/ui'
+import type { container } from '#build/ui';
+import type { ButtonProps, PageFeatureProps } from '@nuxt/ui'
 
 const features: PageFeatureProps[] = [
   {
@@ -31,8 +32,9 @@ const features: PageFeatureProps[] = [
   },
   {
     title: 'Wanna collab?', 
-    description: 'Contact me via imprint or use the social platforms linked below.', 
-    icon: 'i-material-symbols:mail'
+    description: 'Hit this card to shoot me an email, or use the socials below.', 
+    icon: 'i-material-symbols:mail',
+    to: 'mailto:ankunft.matches-7v@icloud.com'
   }
 ]
 </script>
