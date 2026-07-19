@@ -97,7 +97,7 @@ const items = ref<TabsItem[]>([
       {
         name: 'Vinyl Face',
         description: "My logo. Inspired by the sound of vinyl and the 90s house scene, it can't wait to get behind the decks. 🪩 Wanna hear some DJ sets? Just click or tap on it.",
-        cover: '/icons/Logo.png',
+        cover: '/icons/Logo2.png',
         to: 'https://www.mixcloud.com/haenk-music/',
         tools: [
           { name: 'Affinity', icon: 'i-streamline-logos:affinity-designer-logo-solid' },

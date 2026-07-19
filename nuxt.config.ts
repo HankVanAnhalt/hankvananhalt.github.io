@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     head: {
       title: 'HÆNK.',
       link: [
-        { rel: 'icon', type: 'image/png', href: '/icons/Logo.png' }
+        { rel: 'icon', type: 'image/png', href: '/icons/Logo_Filled.png' }
       ]
     }
   }
