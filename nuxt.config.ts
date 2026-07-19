@@ -36,9 +36,5 @@ export default defineNuxtConfig({
       ]
     }
   },
-  ssr: true,
-  image:
-  {
-    provider: "none"
-  }
+  ssr: true // required for Nuxt Image to do its optimization at build
 })

@@ -177,12 +177,23 @@ const selectedTab = ref('programming')
                   </span>
                 </div>
               </template>
-              <NuxtImg :src="project.cover" alt="Project Cover" class="w-full rounded-lg" />
+              <NuxtImg :src="project.cover" alt="Project Cover" class="w-full rounded-lg" loading="eager"/>
             </UPageCard>
 
           </UPageList>
         </div>
       </template>
     </UTabs>
+
+    <!-- Versteckter Block, den NUR der Build-Crawler sieht -->
+    <div style="display: none;" aria-hidden="true">
+      <template v-for="tab in items" :key="tab.value">
+        <NuxtImg 
+          v-for="project in tab.projects" 
+          :key="project.name" 
+          :src="project.cover" 
+        />
+      </template>
+    </div>
   </UPageSection>
 </template>
