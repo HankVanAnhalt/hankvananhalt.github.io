@@ -36,5 +36,13 @@ export default defineNuxtConfig({
       ]
     }
   },
-  ssr: true // required for Nuxt Image to do its optimization at build
+  ssr: true, // required for Nuxt Image to do its optimization at build
+  app: {
+    head: {
+      title: 'HÆNK',
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/icons/Logo.png' }
+      ]
+    }
+  }
 })
