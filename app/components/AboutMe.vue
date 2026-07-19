@@ -4,7 +4,7 @@ import type { PageFeatureProps } from '@nuxt/ui'
 const features: PageFeatureProps[] = [
   {
     title: 'Education',
-    description: 'B.Sc. & M.Sc. Computer Media Science, Advanced Diploma Classical Guitar',
+    description: 'B.Sc. & M.Sc. Media Computer Science, Advanced Diploma Classical Guitar',
     icon: 'i-icon-park-solid:degree-hat'
   },
   {
