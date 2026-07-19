@@ -42,6 +42,12 @@ export default defineNuxtConfig({
       title: 'HÆNK.',
       link: [
         { rel: 'icon', type: 'image/png', href: '/icons/Logo_Filled.png' }
+      ],
+      meta: [
+        { 
+          name: 'google-site-verification', 
+          content: 'XMM0NQIpeaKxWbUDIwedsJXvhI7ndEcslEBhco_aVn0' 
+        }
       ]
     }
   }
