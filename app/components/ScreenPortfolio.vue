@@ -159,8 +159,8 @@ watch(selectedTab, () => {
   <UPageSection>
     <template #title>
       <h1
-        class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center landscape:gap-10 portrait:justify-between text-nowrap">
-        💻 Projects 🚀
+        class="text-[12vw] landscape:text-[8vw] font-black leading-none tracking-tight text-left text-nowrap">
+        Projects 🚀
       </h1>
     </template>
 
