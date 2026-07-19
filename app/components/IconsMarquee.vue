@@ -8,10 +8,13 @@ defineProps<{
   <UMarquee 
     :reverse="reverse" 
     :ui="{
-        root: '[--duration:40s]'
+        root: '[--duration:60s]'
     }"
   >
     <UIcon name="i-simple-icons:github" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons:gitlab" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons:jira" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons:confluence" class="size-10 shrink-0" />
     <UIcon name="i-cbi:abletonlive" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons:juce" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons:protools" class="size-10 shrink-0" />
