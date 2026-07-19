@@ -19,6 +19,7 @@ defineProps<{
     <UIcon name="i-simple-icons:dotnet" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons:vuedotjs" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons:typescript" class="size-10 shrink-0" />
+    <UIcon name="i-simple-icons:tailwindcss" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons:python" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons:nuxt" class="size-10 shrink-0" />
     <UIcon name="i-simple-icons:swift" class="size-10 shrink-0" />
