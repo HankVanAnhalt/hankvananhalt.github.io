@@ -36,5 +36,9 @@ export default defineNuxtConfig({
       ]
     }
   },
-  ssr: false
+  ssr: true,
+  image:
+  {
+    provider: "none"
+  }
 })
