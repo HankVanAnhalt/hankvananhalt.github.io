@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import type { TabsItem } from '@nuxt/ui'
 
-// 1. Die kompletten Datenstrukturen direkt im passenden Format für UTabs
 const items = ref<TabsItem[]>([
   {
     value: 'programming',
@@ -108,7 +107,7 @@ const items = ref<TabsItem[]>([
       },
       {
         name: 'Educational Cartoon',
-        description: 'While working at Deutsche Telekom, I independently created an animated movie focused on social engineering and digital safety. Managing the entire creation process alone—from asset creation, rigging and compositing to color grading, audio production and sound scoring—this project was a fantastic opportunity to unite my various passions within media production.',
+        description: 'While working at Deutsche Telekom, I independently created an animated movie focused on social engineering and digital safety. Managing the entire creation process alone—from asset creation, rigging and comicsiting to color grading, audio production and sound scoring—this project was a fantastic opportunity to unite my various passions within media production.',
         cover: '/icons/Movie.png',
         to: 'https://www.youtube.com/watch?v=quQXdv5782M&list=PLJv-LhpWtkEd1CBosmlYyWit2J6yNluOJ&index=1',
         tools: [
@@ -147,8 +146,13 @@ const items = ref<TabsItem[]>([
   }
 ])
 
-// 2. Initialer Tab-Value (Matched das 'value' im items-Array für die Vorauswahl)
 const selectedTab = ref('programming')
+
+const isExpanded = ref(false)
+
+watch(selectedTab, () => {
+  isExpanded.value = false
+})
 </script>
 
 <template>
@@ -165,8 +169,15 @@ const selectedTab = ref('programming')
         <div class="w-full flex flex-col gap-8 mt-6">
           <UPageList class="w-full gap-5">
 
-            <UPageCard v-for="project in item.projects" :key="project.name" :description="project.description"
-              :to="project.to" target="_blank" orientation="horizontal" reverse>
+            <UPageCard 
+              v-for="project in (isExpanded ? item.projects : item.projects.slice(0, 3))" 
+              :key="project.name" 
+              :description="project.description"
+              :to="project.to" 
+              target="_blank" 
+              orientation="horizontal" 
+              reverse
+            >
               <template #title>
                 <div class="flex flex-col gap-2">
                   <div v-if="project.tools && project.tools.length" class="flex gap-2 items-center">
@@ -177,15 +188,25 @@ const selectedTab = ref('programming')
                   </span>
                 </div>
               </template>
-              <NuxtImg :src="project.cover" alt="Project Cover" class="w-full rounded-lg" loading="eager"/>
+              <NuxtImg :src="project.cover" alt="Project Cover" class="w-full rounded-lg" />
             </UPageCard>
 
           </UPageList>
+
+          <!-- Der Expand-Button taucht nur auf, wenn der Tab tatsächlich mehr als 3 Projekte hat -->
+          <div v-if="item.projects.length > 3" class="flex justify-center mt-4">
+            <UButton
+              :label="isExpanded ? 'Show Less' : 'Show More'"
+              :icon="isExpanded ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'"
+              variant="soft"
+              @click="() => {isExpanded = !isExpanded}"
+            />
+          </div>
         </div>
       </template>
     </UTabs>
 
-    <!-- Versteckter Block, den NUR der Build-Crawler sieht -->
+    <!-- Required for Nuxt Image on Static Site Deployment -->
     <div style="display: none;" aria-hidden="true">
       <template v-for="tab in items" :key="tab.value">
         <NuxtImg 
