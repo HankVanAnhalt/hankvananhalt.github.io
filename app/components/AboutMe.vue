@@ -4,6 +4,11 @@ import type { ButtonProps, PageFeatureProps } from '@nuxt/ui'
 
 const features: PageFeatureProps[] = [
   {
+    title: 'Location', 
+    description: 'Berlin, Germany', 
+    icon: 'i-material-symbols:location-on-rounded'
+  },
+  {
     title: 'Education',
     description: 'B.Sc. & M.Sc. Media Computer Science, Advanced Diploma Classical Guitar',
     icon: 'i-icon-park-solid:degree-hat'
@@ -29,14 +34,17 @@ const features: PageFeatureProps[] = [
     title: 'What else?', 
     description: 'Fueled by music, guitars, skateboards, games, and pizza since Y2K! 🎸 🛹 🍕', 
     icon: 'i-material-symbols:person-heart'
-  },
-  {
-    title: 'Wanna collab?', 
-    description: 'Hit this card to shoot me an email, or use the socials below.', 
-    icon: 'i-material-symbols:mail',
-    to: 'mailto:ankunft.matches-7v@icloud.com'
   }
 ]
+
+const links = ref<ButtonProps[]>([
+  {
+    label: 'CONTACT',
+    to: 'mailto:ankunft.matches-7v@icloud.com',
+    icon: 'i-material-symbols:mail',
+    size: 'xl'
+  }
+])
 </script>
 
 <template>
@@ -44,6 +52,7 @@ const features: PageFeatureProps[] = [
     title="About Me"
     description="My artistic foundation started with an advanced degree in classical guitar — a discipline that fueled my curiosity for the mechanics and effects of sound. This passion quickly evolved from strings to silicon, leading me deep into digital signal processing and synthesizing, professional editing software, game engines and immersive media. Today, I seamlessly fuse these passions to break down silos, bridging the gap between business, architecture, developers and artists. Let's shape the future of entertainment and creative software! 🚀"
     :features="features"
+    :links="links"
     :ui="
     {
       title: 'text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight text-left',
