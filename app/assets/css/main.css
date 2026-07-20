@@ -6,6 +6,10 @@
 	--animate-colorShift: colorShift 8s ease infinite;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes colorShift {
     from {
         filter: hue-rotate(0deg);

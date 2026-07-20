@@ -38,11 +38,27 @@ const features: PageFeatureProps[] = [
 ]
 
 const links = ref<ButtonProps[]>([
+  
+  {
+    to: '#',
+    icon: 'i-lucide-chevron-up',
+    size: 'xl',
+    color: 'neutral',
+    variant: 'soft',
+    class: 'invisible pointer-events-none'
+  },
   {
     label: 'CONTACT',
     to: 'mailto:ankunft.matches-7v@icloud.com',
     icon: 'i-material-symbols:mail',
     size: 'xl'
+  },
+  {
+    to: '#',
+    icon: 'i-lucide-chevron-up',
+    size: 'xl',
+    color: 'neutral',
+    variant: 'soft'
   }
 ])
 </script>
@@ -56,7 +72,8 @@ const links = ref<ButtonProps[]>([
     :ui="
     {
       title: 'text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight text-left',
-      description: 'text-left'
+      description: 'text-left',
+      links: 'flex justify-between'
     }"
   />
 </template>
