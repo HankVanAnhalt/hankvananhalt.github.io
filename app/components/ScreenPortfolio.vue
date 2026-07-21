@@ -159,7 +159,7 @@ watch(selectedTab, () => {
   <UPageSection>
     <template #title>
       <h1
-        class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-10 text-nowrap">
+        class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-5 text-nowrap">
         <span>Spice Rack</span>
         <UIcon name="i-noto:hot-pepper" />
       </h1>
@@ -207,10 +207,14 @@ watch(selectedTab, () => {
       </template>
     </UTabs>
 
-    <!-- Ersetze das versteckte NuxtImg am Ende deines Spice Racks durch natives HTML -->
+    <!-- Required for Nuxt Image on Static Site Deployment -->
     <div style="display: none;" aria-hidden="true">
       <template v-for="tab in items" :key="tab.value">
-        <img v-for="project in tab.projects" :key="project.name" :src="project.cover" />
+        <NuxtImg 
+          v-for="project in tab.projects" 
+          :key="project.name" 
+          :src="project.cover" 
+        />
       </template>
     </div>
   </UPageSection>
