@@ -21,7 +21,7 @@ const cards = [
 <template>
   <UPageSection>
     <template #title>
-      <h1 class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-[3vw] text-nowrap">
+      <h1 class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-[5vw] text-nowrap">
         <UIcon name="i-noto:cooking" class="text-[1.6em] shrink-0 select-none" />
         <span class="block"> What's<br>cookin' </span>
         <span class="text-[2.1em]">?</span>
