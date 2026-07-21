@@ -107,7 +107,7 @@ const items = ref<TabsItem[]>([
       },
       {
         name: 'Educational Cartoon',
-        description: 'While working at Deutsche Telekom, I independently created an animated movie focused on social engineering and digital safety. Managing the entire creation process alone—from asset creation, rigging and comicsiting to color grading, audio production and sound scoring—this project was a fantastic opportunity to unite my various passions within media production.',
+        description: 'While working at Deutsche Telekom, I independently created an animated movie focused on social engineering and digital safety. Managing the entire creation process alone — from asset creation, rigging and composing to color grading, audio production and sound scoring — this project was a fantastic opportunity to unite my various passions within media production.',
         cover: '/icons/Movie.png',
         to: 'https://www.youtube.com/watch?v=quQXdv5782M&list=PLJv-LhpWtkEd1CBosmlYyWit2J6yNluOJ&index=1',
         tools: [
