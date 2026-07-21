@@ -2,15 +2,15 @@
 
 const cards = [
   {
-    title: "First Contribution to Open Source",
+    title: "Contributed to Open Source",
     description: "Dived deep into PB2350 microcontroller audio processing and fixed streaming issues specific to macOS and TinyUSB, enabling bidirectional realtime audio over Bluetooth!",
     icon: "i-simple-icons:raspberrypi",
     img: "/icons/Pico2W.png",
     to: "https://github.com/HankVanAnhalt/DS5Dongle-MacOS-Audio-Optimization"
   },
   {
-    title: "Published my first App",
-    description: "At JYMMiN I'm developing serious games in health tech. Being the sole developer I had the pleasure to manage the whole distribution process including the publishment of our public app SQUATS.",
+    title: "Shipped my first App",
+    description: "At JYMMiN, I develop serious games in health tech. As the sole developer, I have the pleasure of managing the whole distribution process, including publishing our public app SQUATS.",
     icon: "i-simple-icons:unity",
     img: "/icons/squats.png",
     to: "https://play.google.com/store/apps/details?id=com.JYMMiNGmbH.JYMMiN_SQUATS&hl=gsw"
@@ -21,10 +21,10 @@ const cards = [
 <template>
   <UPageSection>
     <template #title>
-      <h1 class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center landscape:gap-10 portrait:justify-between text-nowrap">
-        <span class="text-[1.5em] select-none">🍳</span>
+      <h1 class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-10 text-nowrap">
+        <UIcon name="i-noto:cooking" class="text-[1.6em] shrink-0 select-none" />
         <span class="block"> What's<br>cookin' </span>
-        <span class="select-none text-[2em]">?</span>
+        <span class="text-[2.1em]">?</span>
       </h1>
     </template>
 

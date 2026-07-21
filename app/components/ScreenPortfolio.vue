@@ -159,8 +159,9 @@ watch(selectedTab, () => {
   <UPageSection>
     <template #title>
       <h1
-        class="text-[12vw] landscape:text-[8vw] font-black leading-none tracking-tight text-left text-nowrap">
-        Projects 🚀
+        class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-10 text-nowrap">
+        <span>Spice Rack</span>
+        <UIcon name="i-noto:hot-pepper" />
       </h1>
     </template>
 

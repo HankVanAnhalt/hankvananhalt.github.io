@@ -65,15 +65,21 @@ const links = ref<ButtonProps[]>([
 
 <template>
   <UPageSection
-    title="About Me"
     description="My artistic foundation started with an advanced degree in classical guitar — a discipline that fueled my curiosity for the mechanics and effects of sound. This passion quickly evolved from strings to silicon, leading me deep into digital signal processing and synthesizing, professional editing software, game engines and immersive media. Today, I seamlessly fuse these passions to break down silos, bridging the gap between business, architecture, developers and artists. Let's shape the future of entertainment and creative software! 🚀"
     :features="features"
     :links="links"
     :ui="
     {
-      title: 'text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight text-left',
       description: 'text-left',
       links: 'flex justify-between'
     }"
-  />
+  >
+  
+  <template #title>
+      <h1 class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-10 text-nowrap">
+        About Me
+      </h1>
+    </template>
+
+  </UPageSection>
 </template>
