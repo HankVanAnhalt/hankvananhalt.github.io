@@ -207,14 +207,10 @@ watch(selectedTab, () => {
       </template>
     </UTabs>
 
-    <!-- Required for Nuxt Image on Static Site Deployment -->
+    <!-- Ersetze das versteckte NuxtImg am Ende deines Spice Racks durch natives HTML -->
     <div style="display: none;" aria-hidden="true">
       <template v-for="tab in items" :key="tab.value">
-        <NuxtImg 
-          v-for="project in tab.projects" 
-          :key="project.name" 
-          :src="project.cover" 
-        />
+        <img v-for="project in tab.projects" :key="project.name" :src="project.cover" />
       </template>
     </div>
   </UPageSection>
