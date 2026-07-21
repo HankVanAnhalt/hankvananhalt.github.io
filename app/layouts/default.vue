@@ -9,7 +9,7 @@
 
     <UFooter>
       <template #left>
-        <span class="text-sm text-gray-500 cursor-pointer hover:underline">
+        <span class="text-sm text-gray-500 cursor-pointer">
           © {{ new Date().getFullYear() }} Maximilian Hanke
         </span>
       </template>
