@@ -27,12 +27,12 @@ const features: PageFeatureProps[] = [
   },
   {
     title: "What's your take on AI?", 
-    description: 'No vibe-coded slop, no AI art. Pure craftsmanship and full control.', 
+    description: 'Accelerate thinking & workflows to focus on things that matter - high quality output & happy stakeholders.', 
     icon: 'i-hugeicons:artificial-intelligence-04'
   },
   {
     title: 'What else?', 
-    description: 'Fueled by music, guitars, skateboards, games, and pizza since Y2K! 🎸 🛹 🍕', 
+    description: 'Fueled by music, guitars, skateboards, games, and pizza since Y2K! 🎸 🛹 🎮 🍕', 
     icon: 'i-material-symbols:person-heart'
   }
 ]
