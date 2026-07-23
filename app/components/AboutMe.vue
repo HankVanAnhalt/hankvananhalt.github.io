@@ -27,7 +27,7 @@ const features: PageFeatureProps[] = [
   },
   {
     title: "What's your take on AI?", 
-    description: 'Accelerate thinking & workflows to focus on things that matter - high quality output & happy stakeholders.', 
+    description: 'Accelerate thinking & streamline workflows to focus on things that matter - high quality output & happy stakeholders.', 
     icon: 'i-hugeicons:artificial-intelligence-04'
   },
   {
