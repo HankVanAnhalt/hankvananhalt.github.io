@@ -3,7 +3,7 @@
 const cards = [
   {
     title: "Contributed to Open Source",
-    description: "Dived deep into PB2350 microcontroller audio processing and fixed streaming issues specific to macOS and TinyUSB, enabling bidirectional realtime audio over Bluetooth!",
+    description: "Dived deep into RP2350 microcontroller audio processing and fixed streaming issues specific to macOS and TinyUSB, enabling bidirectional realtime audio over Bluetooth!",
     icon: "i-simple-icons:raspberrypi",
     img: "/icons/Pico2W.png",
     to: "https://github.com/HankVanAnhalt/DS5Dongle-MacOS-Audio-Optimization"
