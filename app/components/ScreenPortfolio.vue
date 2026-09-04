@@ -54,7 +54,7 @@ watch(selectedTab, () => {
                 :alt="project.name"
                 loading="lazy"
                 :style="{ aspectRatio: (aspectRatios as Record<string, string>)[project.cover] }"
-                class="w-full max-h-96 object-contain rounded-lg bg-gray-100 dark:bg-gray-800"
+                class="w-full max-h-96 object-contain rounded-lg"
               />
             </UPageCard>
 
