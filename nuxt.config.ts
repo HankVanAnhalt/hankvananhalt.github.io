@@ -1,4 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { portfolioTabs } from './app/data/portfolio'
+
+const portfolioImageRoutes = portfolioTabs.flatMap(tab =>
+  tab.projects.map(project => `/_ipx/q_82${project.cover}`)
+)
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -40,6 +46,13 @@ export default defineNuxtConfig({
   image: {
     format: ['webp', 'avif'],
     quality: 82
+  },
+  nitro: {
+    prerender: {
+      // Portfolio covers only render for the active tab at build time (UTabs),
+      // so IPX won't generate variants for the rest without being told explicitly.
+      routes: portfolioImageRoutes
+    }
   },
   app: {
     head: {
