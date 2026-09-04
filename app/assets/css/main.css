@@ -23,7 +23,6 @@ html {
 		var(--color-red-500) calc(15/16 * 100%),
 		var(--color-red-500) calc(16/16 * 100%));
 	background-size: 400% 100%;
-	background-attachment: fixed;
 	animation: colorShift 15s linear infinite;
 }
 
