@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   },
   ssr: true, // required for Nuxt Image to do its optimization at build
   image: {
-    format: ['webp', 'avif'],
+    format: ['webp'],
     quality: 82
   },
   nitro: {
