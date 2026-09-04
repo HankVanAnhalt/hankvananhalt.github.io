@@ -2,6 +2,7 @@
 import { ref, watch } from 'vue'
 import type { TabsItem } from '@nuxt/ui'
 import { portfolioTabs } from '~/data/portfolio'
+import aspectRatios from '~/data/portfolio-aspect-ratios.generated.json'
 
 const items = ref<TabsItem[]>(portfolioTabs)
 
@@ -52,7 +53,8 @@ watch(selectedTab, () => {
                 :src="project.cover"
                 :alt="project.name"
                 loading="lazy"
-                class="w-full aspect-video object-cover rounded-lg"
+                :style="{ aspectRatio: (aspectRatios as Record<string, string>)[project.cover] }"
+                class="w-full max-h-96 object-contain rounded-lg bg-gray-100 dark:bg-gray-800"
               />
             </UPageCard>
 

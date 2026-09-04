@@ -1,8 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { writeFile } from 'node:fs/promises'
+import { fileURLToPath } from 'node:url'
+import sharp from 'sharp'
 import { portfolioTabs } from './app/data/portfolio'
 
-const portfolioImageRoutes = portfolioTabs.flatMap(tab =>
-  tab.projects.map(project => `/_ipx/q_82${project.cover}`)
+const portfolioCovers = portfolioTabs.flatMap(tab => tab.projects.map(project => project.cover))
+
+const portfolioImageRoutes = portfolioCovers.map(cover => `/_ipx/q_82${cover}`)
+
+// Reads each cover's real width/height so the UI can reserve layout space
+// (aspect-ratio) without anyone hand-maintaining pixel dimensions in the data file.
+const portfolioAspectRatios = Object.fromEntries(
+  await Promise.all(
+    portfolioCovers.map(async (cover) => {
+      const { width, height } = await sharp(fileURLToPath(new URL(`./public${cover}`, import.meta.url))).metadata()
+      return [cover, `${width} / ${height}`]
+    })
+  )
+)
+
+await writeFile(
+  fileURLToPath(new URL('./app/data/portfolio-aspect-ratios.generated.json', import.meta.url)),
+  JSON.stringify(portfolioAspectRatios, null, 2)
 )
 
 export default defineNuxtConfig({

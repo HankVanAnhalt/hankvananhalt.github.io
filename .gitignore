@@ -6,6 +6,9 @@
 .cache
 dist
 
+# Generated at build/dev time, see nuxt.config.ts
+app/data/portfolio-aspect-ratios.generated.json
+
 # Node dependencies
 node_modules
 
