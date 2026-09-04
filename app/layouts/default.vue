@@ -72,7 +72,7 @@
       </template>
 
       <template #default>
-        <UButton icon="i-simple-icons-github" color="neutral" variant="ghost" to="https://github.com/HankVanAnhalt"
+        <UButton icon="i-simple-icons:github" color="neutral" variant="ghost" to="https://github.com/HankVanAnhalt"
           target="_blank" aria-label="GitHub" />
 
         <UButton icon="i-simple-icons:linkedin" color="neutral" variant="ghost"
