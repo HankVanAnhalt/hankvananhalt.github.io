@@ -21,28 +21,28 @@ const cards = [
 <template>
   <UPageSection>
     <template #title>
-      <h1 class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-[5vw] text-nowrap">
+      <h2 class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-[5vw] text-nowrap">
         <UIcon name="i-noto:cooking" class="text-[1.6em] shrink-0 select-none" />
         <span class="block"> What's<br>cookin' </span>
         <span class="text-[2.1em]">?</span>
-      </h1>
+      </h2>
     </template>
 
     <div class="w-full pt-8">
       <div class="hidden landscape:grid grid-cols-2 gap-6 h-full">
-        <UPageCard 
-          v-for="card in cards" 
-          :key="card.title" 
-          :title="card.title" 
+        <UPageCard
+          v-for="card in cards"
+          :key="card.title"
+          :title="card.title"
           :description="card.description"
-          :icon="card.icon" 
-          :to="card.to" 
-          target="_blank" 
-          variant="soft" 
+          :icon="card.icon"
+          :to="card.to"
+          target="_blank"
+          variant="soft"
           orientation="horizontal"
           :ui="{ wrapper: 'h-full' }"
         >
-          <NuxtImg :src="card.img" class="rounded-lg max-h-40 md:max-h-full object-contain" />
+          <NuxtImg :src="card.img" :alt="card.title" loading="lazy" class="rounded-lg aspect-square max-h-40 md:max-h-full object-contain" />
         </UPageCard>
       </div>
 
@@ -57,7 +57,7 @@ const cards = [
             variant="soft" 
             class="mx-1"
           >
-            <NuxtImg :src="item.img" class="rounded-lg aspect-1 mx-auto" />
+            <NuxtImg :src="item.img" :alt="item.title" loading="lazy" class="rounded-lg aspect-1 mx-auto" />
           </UPageCard>
         </UCarousel>
       </div>

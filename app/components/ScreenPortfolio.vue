@@ -158,11 +158,11 @@ watch(selectedTab, () => {
 <template>
   <UPageSection>
     <template #title>
-      <h1
+      <h2
         class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-[2.5vw] text-nowrap">
         <span>Spice Rack</span>
         <UIcon name="i-noto:hot-pepper" />
-      </h1>
+      </h2>
     </template>
 
     <UTabs v-model="selectedTab" :items="items" class="w-full">
@@ -189,7 +189,12 @@ watch(selectedTab, () => {
                   </span>
                 </div>
               </template>
-              <NuxtImg :src="project.cover" alt="Project Cover" class="w-full rounded-lg" />
+              <NuxtImg
+                :src="project.cover"
+                :alt="project.name"
+                loading="lazy"
+                class="w-full aspect-video object-cover rounded-lg"
+              />
             </UPageCard>
 
           </UPageList>

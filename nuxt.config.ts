@@ -37,17 +37,36 @@ export default defineNuxtConfig({
     }
   },
   ssr: true, // required for Nuxt Image to do its optimization at build
+  image: {
+    format: ['webp', 'avif'],
+    quality: 82
+  },
   app: {
     head: {
       title: 'HÆNK.',
+      htmlAttrs: {
+        lang: 'en'
+      },
       link: [
         { rel: 'icon', type: 'image/png', href: '/icons/Logo_Filled.png' }
       ],
       meta: [
-        { 
-          name: 'google-site-verification', 
-          content: 'XMM0NQIpeaKxWbUDIwedsJXvhI7ndEcslEBhco_aVn0' 
-        }
+        {
+          name: 'google-site-verification',
+          content: 'XMM0NQIpeaKxWbUDIwedsJXvhI7ndEcslEBhco_aVn0'
+        },
+        {
+          name: 'description',
+          content: "HÆNK is a Berlin-based developer and sound designer working across web apps, games, and immersive media — from spatial audio and DSP to full-stack development."
+        },
+        { property: 'og:title', content: 'HÆNK.' },
+        {
+          property: 'og:description',
+          content: "HÆNK is a Berlin-based developer and sound designer working across web apps, games, and immersive media — from spatial audio and DSP to full-stack development."
+        },
+        { property: 'og:image', content: '/icons/Logo_Filled.png' },
+        { property: 'og:type', content: 'website' },
+        { name: 'twitter:card', content: 'summary' }
       ]
     }
   }

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { container } from '#build/ui';
 import type { ButtonProps, PageFeatureProps } from '@nuxt/ui'
 
 const features: PageFeatureProps[] = [
@@ -76,9 +75,9 @@ const links = ref<ButtonProps[]>([
   >
   
   <template #title>
-      <h1 class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-10 text-nowrap">
+      <h2 class="text-[10vw] landscape:text-[8vw] font-black leading-none tracking-tight flex items-center gap-10 text-nowrap">
         About Me
-      </h1>
+      </h2>
     </template>
 
   </UPageSection>
